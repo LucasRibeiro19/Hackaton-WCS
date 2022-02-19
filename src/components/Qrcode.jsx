@@ -8,7 +8,7 @@ function QrCode({table}) {
     return ( 
         <>
               <Link to={`/commande/${id}`}>
-                  <QRCode value="http://facebook.github.io/react/"/>
+                  <QRCode value=""/>
                   <p>{id}</p>
               </Link>
         </>

@@ -1,12 +1,15 @@
-function Carte() {
+import Menu from "./Menu";
+
+function Carte({plats}) {
     return ( 
         <>
-            <p>Plats</p>
-            <p>Plats</p>
-            <p>Plats</p>
-            <p>Plats</p>
-            <p>Plats</p>
-            <p>Plats</p>
+            {plats.map((plat)=>(
+               <Menu
+                nom={plat.nom}
+                img={plat.img}
+                key={plat.id}
+               /> 
+            ))}
         </>
 
      );
