@@ -9,6 +9,13 @@ import Carte from './Carte';
 function App() {
   
   const [choix, setChoix] = useState([]);
+  
+  const [tables, setTables] = useState([
+    {id : '1', panier: []},
+    {id : '2', panier: []},
+    {id : '3', panier: []},
+    {id : '4', panier: []}
+  ]);
 
   const handleChoix = (e)=>{
     if (choix.includes(e.target.value)){
@@ -25,14 +32,7 @@ function App() {
     return choix.some((el) => el === id);
   };
   
-  console.log(isChoix('Burger'));
    
-  const tables = [
-    {id : '1'},
-    {id : '2'},
-    {id : '3'},
-    {id : '4'}
-  ];
   
 
   const plats = [
@@ -48,7 +48,6 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<QrList tables={tables}/>}></Route>
-          <Route path='/carte' element={<Carte plats={plats}/>}></Route>
           <Route path='/commande/:table' element={<Commande plats={plats} handleChoix={handleChoix} isChoix={isChoix} choix={choix}/>}></Route>
         </Routes>
       </div>

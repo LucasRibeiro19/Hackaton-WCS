@@ -3,7 +3,6 @@ import QrCode from "./Qrcode";
 
 function QrList({tables}) {
 
-    // console.log(tables);
 
     return ( 
         <>
