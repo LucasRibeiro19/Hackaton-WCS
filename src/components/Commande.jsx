@@ -10,7 +10,7 @@ function Commande({plats, handleChoix, isChoix, choix}) {
 
     return ( 
         <>
-            <Carte plats={plats} handleChoix={handleChoix} isChoix={isChoix}/>
+            <Carte plats={plats} handleChoix={handleChoix} isChoix={isChoix} table={params.table}/>
             <h2>Table {params.table}</h2>
             <Panier choix={choix}/>
         </>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Panier( {choix} ) {
 
-    console.log(choix);
+    // console.log(choix);
     return (
         <>
             <h2>Mon choix :</h2>
